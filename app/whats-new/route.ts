@@ -45,7 +45,7 @@ export async function GET() {
       isRedirectedToApp: shouldBeRedirected,
     });
 
-    const whitelist: string[] = ["d8eb276d-28c8-4234-b0ab-45c19e91c239"];
+    const whitelist: string[] = ["73ab22d9-2d3c-4988-9b09-6815838a4f7a"];
 
     if (shouldBeRedirected || whitelist.includes(uuid.value)) {
       return NextResponse.redirect(`${process.env.APP_URL}?uuid=${uuid.value}`);
